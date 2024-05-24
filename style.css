@@ -245,7 +245,7 @@ header button a {
 
 #about .logo {
   height: 300px;
-  width: 210px;
+  width: 350px;
   border-radius: 40%;
   filter: grayscale(10%);
   position: relative;
@@ -446,3 +446,510 @@ header button a {
   font-size: 2rem;
   color: #DBDBDB;
 }
+
+.line {
+  display: none;
+}
+ 
+@media only screen and (max-width: 601px) {
+  
+header {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 3rem;
+}
+
+header nav ul {
+  display: none;
+}
+
+.line::before,
+.line::after,
+.line input {
+  content: "";
+  width: 50px;
+  height: 7px;
+  background-color: #fff;
+  display: block;
+  transform-origin: left center;
+  transition: all 0.25s ease-in-out;
+  margin-right: 1rem;
+}
+
+.line input {
+  appearance: none;
+}
+
+.line input:checked {
+  opacity: 0;
+}
+
+.line:has(input:checked)::before {
+  rotate: 45deg;
+  width: 40px; 
+}
+
+.line:has(input:checked)::after {
+  rotate: -45deg; 
+  width: 40px; 
+} 
+
+.line:has(input:checked) + nav ul {
+   display: block;                                
+   position: absolute; 
+   top: 3.3rem; 
+   background-color: #211e22;
+   left: 3rem;
+   right: 3rem; 
+   text-align: center;
+   padding: 1rem 0;
+   opacity: 1; 
+   transition: all 1s ease-in; 
+}  
+
+.line:has(input:checked) + nav ul li a {
+  outline: 1px solid white; 
+  display: block; 
+  padding: 0.5rem 0;
+} 
+
+.line {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+} 
+
+.line input:checked {
+ /* width: 0; */
+ opacity: 0;
+}
+
+header button {
+  padding: .2rem .7rem;
+}
+
+#home {
+  grid-template-columns: 1fr;
+  place-items: center;
+  padding: 7rem 3rem 1rem;
+  height: 90vh;
+  gap: 1.5rem;
+}
+
+#home div img {
+  width: 270px;
+  height: 55%;
+}
+
+#home .bio {
+  padding: .1rem 2rem;
+}
+
+#home .bio h4 {
+  font-size: 3rem;
+}
+
+#home .bio h4 span {
+  font-size: 3.5rem;
+}
+
+
+#home .box {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: #FFF4E0;
+  margin: 1rem;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 50%;
+}
+
+#home .bio button {
+  padding: .3rem .5rem;
+}
+
+#about {
+  position: relative;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem 7rem;
+  height: 100vh;
+}
+
+#about .anim h3 {
+  font-size: 1.7rem;
+  position: relative;
+  margin-bottom: 1.7rem;
+}
+
+#about .anim p {
+  position: relative;
+  font-size: 1rem;
+  width: 30%;
+}
+
+#about .anim p span {
+  font-size: 0.9rem;
+}
+
+#about .anim div {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+#about .logo {
+  display: none;
+}
+
+#projects {
+  padding: 5rem;
+}
+
+#projects h3 {
+  font-size: 2.5rem;
+}
+
+#projects h4 {
+  font-size: 1.5rem;
+  padding: .3rem;
+}
+
+#projects div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#projects div img {
+  height: 170px;
+  width: 300px;
+}
+
+#projects div div {
+  display: flex;
+  flex-direction: column;
+}
+
+#projects div div a {
+  font-size: 0.9rem;
+  padding: .5rem;
+  width: 50%;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 3rem 7rem;
+}
+
+.skills div h3 {
+  font-size: 2rem;
+}
+
+.skills div h4 {
+  font-size: 1.5rem;
+}
+
+.skills div p {
+  font-size: 1.3rem;
+  padding: .7rem .3rem;
+}
+
+#contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+}
+
+#contacts h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+#contacts h4 {
+  font-size: 1.3rem;
+}
+
+/* #contacts div div {
+  display: flex;
+  gap: 1rem;
+} */
+
+#contacts span {
+  font-size: 1rem;
+  padding: .2rem;
+}
+
+#contacts span i {
+  padding: .3rem;
+}
+
+#contacts p {
+  font-size: 1.9rem;
+}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1100px) {
+ 
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 3rem;
+  }
+  
+  header nav ul {
+    display: none;
+  }
+  
+  .line::before,
+  .line::after,
+  .line input {
+    content: "";
+    width: 70px;
+    height: 9px;
+    background-color: #fff;
+    display: block;
+    transform-origin: left center;
+    transition: all 0.25s ease-in-out;
+    margin-right: 1rem;
+  }
+  
+  .line input {
+    appearance: none;
+  }
+  
+  .line input:checked {
+    opacity: 0;
+  }
+  
+  .line:has(input:checked)::before {
+    rotate: 45deg;
+    width: 45px; 
+  }
+  
+  .line:has(input:checked)::after {
+    rotate: -45deg; 
+    width: 45px; 
+  } 
+  
+  .line:has(input:checked) + nav ul {
+     display: block;                                
+     position: absolute; 
+     top: 3.3rem; 
+     background-color: #211e22;
+     left: 3rem;
+     right: 3rem; 
+     text-align: center;
+     padding: 1rem 0;
+     opacity: 1; 
+     transition: all 1s ease-in; 
+  }  
+  
+  .line:has(input:checked) + nav ul li a {
+    outline: 1px solid white; 
+    display: block; 
+    padding: 0.5rem 0;
+  } 
+  
+  .line {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  } 
+  
+  .line input:checked {
+   /* width: 0; */
+   opacity: 0;
+  }
+  
+  header button {
+    padding: .2rem .7rem;
+  }
+  
+  #home {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 7rem 3rem 1rem;
+    height: 90vh;
+    gap: 1.5rem;
+  }
+  
+  #home div img {
+    display: none;
+  }
+  
+  #home .bio {
+    padding: .1rem 2rem;
+  }
+  
+  #home .bio h4 {
+    font-size: 3.1rem;
+  }
+  
+  #home .bio h4 span {
+    font-size: 3.7rem;
+  }
+  
+  
+  #home .box {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    color: #FFF4E0;
+    margin: 1rem;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .box::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 50%;
+  }
+  
+  #home .bio button {
+    padding: .3rem .5rem;
+  }
+  
+  #about {
+    position: relative;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 7rem;
+  }
+  
+  #about .anim h3 {
+    font-size: 1.9rem;
+    position: relative;
+    margin-bottom: 1.7rem;
+  }
+  
+  #about .anim p {
+    position: relative;
+    font-size: 1.2rem;
+    width: 50%;
+  }
+  
+  #about .anim p span {
+    font-size: 1rem;
+  }
+  
+  #about .anim div {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  #about .logo {
+    display: none;
+  }
+  
+  #projects {
+    padding: 5rem;
+  }
+  
+  #projects h3 {
+    font-size: 2.7rem;
+    margin-left: 1rem;
+  }
+  
+  #projects h4 {
+    font-size: 1.5rem;
+    padding: .3rem;
+    margin-left: 1.5rem;
+  }
+  
+  #projects div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #projects div img {
+    height: 190px;
+    width: 300px;
+  }
+  
+  #projects div div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #projects div div a {
+    font-size: 0.9rem;
+    padding: .5rem;
+    width: 50%;
+  }
+  
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 7rem;
+  }
+  
+  .skills div h3 {
+    font-size: 2.2rem;
+  }
+  
+  .skills div h4 {
+    font-size: 1.7rem;
+  }
+  
+  .skills div p {
+    font-size: 1.4rem;
+    padding: .7rem .3rem;
+  }
+  
+  #contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 3rem;
+  }
+  
+  #contacts h3 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  #contacts h4 {
+    font-size: 1.4rem;
+  }
+  
+  /* #contacts div div {
+    display: flex;
+    gap: 1rem;
+  } */
+  
+  #contacts span {
+    font-size: 1.1rem;
+    padding: .2rem;
+  }
+  
+  #contacts span i {
+    padding: .3rem;
+  }
+  
+  #contacts p {
+    font-size: 2rem;
+  }  
+} 
