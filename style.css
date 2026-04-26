@@ -324,7 +324,7 @@ header button a {
   margin-bottom: 1rem;
 }
 
-.project-caption {
+#project-caption {
   font-size: 14px;
   color: #C4500A;
   margin: 8px 0 12px;
